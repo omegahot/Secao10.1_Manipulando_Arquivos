@@ -6,27 +6,24 @@ class Program
     {
         string path = @"C:\Temporarios\arquivos\file1.txt";
 
-        StreamReader sr = null;
-
         try
         {
-            sr = File.OpenText(path);
-            
-            while (!sr.EndOfStream)
+            using (StreamReader sr = File.OpenText(path))
             {
-                string line = sr.ReadLine();
-                Console.WriteLine(line);
+                while (!sr.EndOfStream)
+                {
+                    Console.WriteLine(sr.ReadLine());
+                }
             }
-
+        }
+        catch (FileNotFoundException e)
+        {
+            Console.WriteLine("Arquivo não encontrado: " + path);
         }
         catch (IOException e)
         {
-            Console.WriteLine("Um erro ocorreu!");
+            Console.WriteLine("Erro ao ler o arquivo: ");
             Console.WriteLine(e.Message);
-        }
-        finally
-        {
-            if (sr != null) sr.Close();
         }
     }
 }
