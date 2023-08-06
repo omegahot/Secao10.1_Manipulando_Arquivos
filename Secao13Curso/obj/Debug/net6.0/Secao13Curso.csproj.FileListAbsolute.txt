@@ -1,0 +1,15 @@
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\bin\Debug\net6.0\Secao13Curso.exe
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\bin\Debug\net6.0\Secao13Curso.deps.json
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\bin\Debug\net6.0\Secao13Curso.runtimeconfig.json
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\bin\Debug\net6.0\Secao13Curso.dll
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\bin\Debug\net6.0\Secao13Curso.pdb
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\Secao13Curso.csproj.AssemblyReference.cache
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\Secao13Curso.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\Secao13Curso.AssemblyInfoInputs.cache
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\Secao13Curso.AssemblyInfo.cs
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\Secao13Curso.csproj.CoreCompileInputs.cache
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\Secao13Curso.dll
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\refint\Secao13Curso.dll
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\Secao13Curso.pdb
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\Secao13Curso.genruntimeconfig.cache
+C:\Temporarios\ws-csharp\Secao13Curso\Secao13Curso\obj\Debug\net6.0\ref\Secao13Curso.dll
