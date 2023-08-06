@@ -4,24 +4,37 @@ class Program
 {
     private static void Main(string[] args)
     {
-        string sourcePath = @"C:\Temporarios\arquivos\file1.txt";
-        string targetPath = @"C:\Temporarios\arquivos\file2.txt";
+        string path = @"C:\Temporarios\arquivos\file1.txt";
+
+        FileStream fs = null;
+        StreamReader sr = null;
+
+
 
         try
         {
-            FileInfo fileInfo = new FileInfo(sourcePath);
-            // fileInfo.CopyTo(targetPath);
-            string[] lines = File.ReadAllLines(sourcePath);
+            fs = new FileStream(path, FileMode.Open);
+            sr = new StreamReader(fs);
+            string line = sr.ReadLine(); 
+            Console.WriteLine(line);
 
-            foreach (string line in lines)
-            {
-                Console.WriteLine(line);
-            }
         }
         catch (IOException e)
         {
             Console.WriteLine("Um erro ocorreu!");
             Console.WriteLine(e.Message);
         }
+        finally
+        {
+            if (fs != null) { 
+                fs.Close();
+            }
+
+            if (sr != null) { 
+                sr.Close();
+            }
+        }
+
+        
     }
 }
