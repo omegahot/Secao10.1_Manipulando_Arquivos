@@ -6,17 +6,17 @@ class Program
     {
         string path = @"C:\Temporarios\arquivos\file1.txt";
 
-        FileStream fs = null;
         StreamReader sr = null;
-
-
 
         try
         {
-            fs = new FileStream(path, FileMode.Open);
-            sr = new StreamReader(fs);
-            string line = sr.ReadLine(); 
-            Console.WriteLine(line);
+            sr = File.OpenText(path);
+            
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                Console.WriteLine(line);
+            }
 
         }
         catch (IOException e)
@@ -26,15 +26,7 @@ class Program
         }
         finally
         {
-            if (fs != null) { 
-                fs.Close();
-            }
-
-            if (sr != null) { 
-                sr.Close();
-            }
+            if (sr != null) sr.Close();
         }
-
-        
     }
 }
