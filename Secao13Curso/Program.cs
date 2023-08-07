@@ -4,25 +4,25 @@ class Program
 {
     private static void Main(string[] args)
     {
-        string path = @"C:\Temporarios\arquivos\file1.txt";
+        string sourcePath = @"C:\Temporarios\arquivos\file1.txt";
+        string targetPath = @"C:\Temporarios\arquivos\file2.txt";
 
         try
         {
-            using (StreamReader sr = File.OpenText(path))
+
+            string[] lines = File.ReadAllLines(sourcePath);
+            using (StreamWriter sw = File.AppendText(targetPath))
             {
-                while (!sr.EndOfStream)
+                foreach (string line in lines)
                 {
-                    Console.WriteLine(sr.ReadLine());
+                    sw.WriteLine(line.ToUpper());
                 }
             }
-        }
-        catch (FileNotFoundException e)
-        {
-            Console.WriteLine("Arquivo não encontrado: " + path);
+
         }
         catch (IOException e)
         {
-            Console.WriteLine("Erro ao ler o arquivo: ");
+            Console.WriteLine("Um erro ocorreu.");
             Console.WriteLine(e.Message);
         }
     }
