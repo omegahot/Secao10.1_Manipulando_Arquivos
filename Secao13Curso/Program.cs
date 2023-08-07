@@ -1,24 +1,34 @@
 ﻿using System.IO;
+using System.Collections.Generic;
 
 class Program
 {
     private static void Main(string[] args)
     {
-        string sourcePath = @"C:\Temporarios\arquivos\file1.txt";
-        string targetPath = @"C:\Temporarios\arquivos\file2.txt";
+        string path = @"C:\Temporarios\arquivos";
 
         try
         {
+            // Listar todos os diretórios.
+            IEnumerable<string> folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+            Console.WriteLine("DIRECTORIES: ");
 
-            string[] lines = File.ReadAllLines(sourcePath);
-            using (StreamWriter sw = File.AppendText(targetPath))
+            foreach(string folder in folders)
             {
-                foreach (string line in lines)
-                {
-                    sw.WriteLine(line.ToUpper());
-                }
+                Console.WriteLine(folder);
             }
 
+            //Listar todos os arquivos.
+            Console.WriteLine();
+            Console.WriteLine("Listando todos os arquivos:");
+            var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+            foreach (string file in files)
+            {
+                Console.WriteLine(file);
+            }
+
+            //Criando um diretório
+            Directory.CreateDirectory(path + @"\new_folder");
         }
         catch (IOException e)
         {
